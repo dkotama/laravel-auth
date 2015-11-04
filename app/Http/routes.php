@@ -28,3 +28,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 //Forgot Pass
 Route::get('password/email', 'Auth\PasswordController@getEmail');
 Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+//Reset Pass
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
